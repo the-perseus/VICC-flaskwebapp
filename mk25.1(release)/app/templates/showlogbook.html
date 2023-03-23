@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Show Logbook</h1>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Location</th>
+				<th>Time</th>
+				<th>Depth</th>
+				<th>Temperature</th>
+			</tr>
+		</thead>
+		<tbody>
+    {% for row in data %}
+		<tr>
+			<td>{{ row.location }}</td>
+			<td>{{ row.time }}</td>
+			<td>{{ row.depth }}</td>
+			<td>{{ row.temperature }}</td>
+		</tr>
+    {% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}
+<!-- Gerüst aus Microblog übernommen. Eigenentwicklung: Neue Seite für Show Logbook erstellt, welche ein Gerüst mit Reihen bildet für die Daten welche aus der Route kommen  -->
